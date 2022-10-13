@@ -1,7 +1,7 @@
 ## Animal-to-human translation | 💻 + 🐁 = ❤️
 In the context of **Machine Learning** applied to **Genomics data** for improving **clinical trials**.
 
-This repo is based on the survey paper:
+The problematic we're dealing in this repo is based on the survey paper:
 [Machine Learning Applications for Therapeutic Tasks with Genomics Data](https://www.cell.com/patterns/pdf/S2666-3899(21)00176-8.pdf).
 *Kexin Huang, Cao Xiao, Lucas M. Glass, Cathy W. Critchlow, Greg Gibson, Jimeng Sun* Published in Patterns.
 
@@ -13,27 +13,23 @@ It focuses on the **ML for Genomics in Clinical Study** part of the above paper.
 
 **Task Description:** Given genotype-phenotype data of animals and only the genotype data of humans, train the model to fit phenotype from the genotype and transfer this model to human.
 
-
+The purpose of this job is to anticipate the **drug response** of a certain human genotype.
 <p align="center">
 <img src="images/animal_to_human_translation.png" width="400px">
 </p>
 
-
-## System requirements
-- Operating System: Linux.
-- 64-bit Python 3.7 installation.
-- blastp: 2.6.0+
-- TensorFlow 1.13.1 or newer with GPU support.
-- One or more NVIDIA GPUs. Recomendation: NVIDIA at least P100 GPU with 16GB.
-- NVIDIA driver 418.87 or newer, CUDA toolkit 10.1 or newer, cuDNN 7.6.2 or newer.
-
-### Conda environment
-environment.yml contains all the dependencies required in order to run ProteinGAN. You can simply run:
-`conda env create --file environment.yml`
-
 ## Data for training
 
+- 98-99% is **non-coding DNA**, yet we still don't know what is doing ? 
+- SNPs - 'SNIPS' single nucleotide polymorphism
+- **non-coding DNA** has regulatory function, yet not known
+- SNPs can predispose to chronic diseases such as cancer, alzheimer, schyzophrenia, etc. 
+
+
 ## Training networks
+A **DNABERT**: _pre-trained Bidirectional Encoder Representations from Transformers model for DNA-language in genome_ **network** for **kmer=6** took about **25 days** on **8 NVIDIA 2080Ti GPUs** to learn on human DNA.
+[DNABERT6](https://drive.google.com/file/d/1BJjqb5Dl2lNMg2warsFQ0-Xvn1xxfFXC/view?usp=sharing)
+What if we can learn models about the **non-coding DNA** function in other species and compare to a human genome?
 
 ## Useful links
 
@@ -56,3 +52,6 @@ Papers influenced final solution:
 - A Style-Based Generator Architecture for Generative Adversarial Networks: https://arxiv.org/pdf/1812.04948.pdf
 - Which Training Methods for GANs do actually Converge? https://arxiv.org/pdf/1801.04406
 
+## Citation
+Yanrong Ji, Zhihan Zhou, Han Liu, Ramana V Davuluri, DNABERT: pre-trained Bidirectional Encoder Representations from Transformers model for DNA-language in genome, Bioinformatics, 2021;, btab083, https://doi.org/10.1093/bioinformatics/btab083
+https://github.com/jerryji1993/DNABERT
