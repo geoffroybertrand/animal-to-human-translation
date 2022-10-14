@@ -1,4 +1,4 @@
-## Animal-to-human translation | 💻 + 🐁 = ❤️
+## Animal-to-human translation | 💻 + 🐁 = ⚕
 In the context of **Machine Learning** applied to **Genomics data** for improving **clinical trials**.
 
 The problematic we're dealing in this repo is based on the survey paper:
@@ -13,7 +13,7 @@ It focuses on the **ML for Genomics in Clinical Study** part of the above paper.
 
 **Task Description:** Given genotype-phenotype data of animals and only the genotype data of humans, train the model to fit phenotype from the genotype and transfer this model to human.
 
-The purpose of this job is to anticipate the **drug response** of a certain human genotype.
+The purpose of this job is to predict the **drug response** on a human genotype.
 <p align="center">
 <img src="images/animal_to_human_translation.png" width="400px">
 </p>
