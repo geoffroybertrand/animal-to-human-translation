@@ -1,4 +1,4 @@
-## Animal-to-human translation | 💻 + 🐁 = ❤️
+## Animal-to-human translation | 💻 + 🐁 = ⚕
 In the context of **Machine Learning** applied to **Genomics data** for improving **clinical trials**.
 
 The problematic we're dealing in this repo is based on the survey paper:
